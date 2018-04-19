@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+nav {
+  background-color: #1da1f2;
+  height: 110px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  nav #logo {
+    grid-column: 2/5; }
+  nav #logo img{
+    height:100%;
+  }
+  nav #links {
+    grid-column: 8/13;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav #links ul li {
+      display: inline;
+      margin-right: 50px;
+      font-size: 24px;
+      color: white; }
+      nav #links ul li a {
+        text-decoration: none !important;
+        color: white; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+#section-a {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 50px; }
+  #section-a h1 {
+    text-align: center;
+    grid-column: 1/13;
+    font-size: 4em;
+    margin-top: 20px; }
+  #section-a #company-logo {
+    grid-column: 2/7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #section-a #company-logo img {
+      width: 60%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  #section-a #company-info {
+    grid-column: 7/12;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #section-a #company-info #info-container h2 {
+      font-size: 1.5em;
+      margin: 10px; }
+    #section-a #company-info #info-container ul li {
+      list-style-type: none;
+      margin: 10px; }
+
+#section-b {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 400px 300px;
+  padding-top: 50px; }
+  #section-b h1 {
+    grid-column: 2/13;
+    font-size: 3em; }
+  #section-b .chart-format {
+    text-align: center; }
+  #section-b #chart-1 {
+    grid-column: 2/7;
+    display: flex;
+    justify-content: space-around; }
+  #section-b #chart-2 {
+    grid-column: 7/12;
+    display: flex;
+    justify-content: space-around; }
+  #section-b #info {
+    grid-column: 2/7; }

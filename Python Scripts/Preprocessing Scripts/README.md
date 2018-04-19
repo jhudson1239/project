@@ -1,0 +1,5 @@
+ The first file in the folder is the merge script. This script was used to merge together the positve and negative csv files outputted by the obtain_tweets script. Merging the two files together created a the training data that would be preprocessed further, when each line was being added to the singular csv file their label was added to them.
+
+The next file is no-repats, this script was used to take the data from the training_data csv file and make sure there is no repeating tweets within it. this was done by a function which takes two arguments, the folder that is being checked and the name of the output file.
+
+The final script, special_char_extraction was used to extract all the weird charaters from the tweets. This was done with an array that was looped through and if the character is present then it is taken out. The function takes two strings, the first is the file to be preprocessed and the second is the name of the output file.

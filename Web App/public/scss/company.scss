@@ -1,0 +1,119 @@
+$blue : rgb(29, 161, 242);
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+}
+
+nav{
+    background-color: $blue;
+    height:110px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    #logo{
+        grid-column:1/4;
+    }
+    #links{
+        grid-column:8/13;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        ul{
+            li{
+                display:inline;
+                margin-right:50px;
+                font-size:24px;
+                color:white;
+                a{
+                    text-decoration: none !important;
+                    color:white;
+                } 
+            }
+        }
+    }
+}
+
+.container{
+    width:80%;
+    margin:0 auto;
+}
+
+#section-a{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 50px;
+    
+    h1{
+        text-align: center;
+        grid-column: 1/13;
+        font-size:4em;
+        margin-top:20px;
+
+
+    }
+
+    #company-logo{
+        grid-column:2/7;
+        padding:20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:60%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    #company-info{
+        grid-column:7/12;
+        padding:20px;
+        height:300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #info-container{
+            h2{
+                font-size: 1.5em;
+                margin:10px;
+            }
+            ul{
+                li{
+                    list-style-type: none;
+                    margin:10px;
+                }
+            }
+        }
+        
+    }
+}
+
+#section-b{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100px 400px 300px;
+    padding-top:50px;
+    h1{
+        grid-column: 2/13;
+        font-size: 3em;
+    }
+    .chart-format{
+        text-align: center;
+    }
+    #chart-1{
+        grid-column: 2/7;
+        display: flex;
+        justify-content: space-around;
+    }
+    #chart-2{
+        grid-column:7/12;
+        display: flex;
+        justify-content: space-around;
+    }
+    #info{
+        grid-column: 2/7;
+    }
+
+
+}
