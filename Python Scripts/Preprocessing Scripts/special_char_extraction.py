@@ -1,3 +1,6 @@
+#This file removed all the weird special charaters from tweets that were present. The script takes an input file
+#and outputs a file with the special charaters removed.
+
 import csv
 
 special_char = [

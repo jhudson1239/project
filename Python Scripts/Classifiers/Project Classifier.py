@@ -1,3 +1,6 @@
+#This script was the final classifier that was used to classify the data.
+#the naive bayes algorithm was used.
+
 import csv
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import classification_report
@@ -59,4 +62,4 @@ def compute_data (testfile, finalFile):
         for row in tweets:
             writer.writerow(row)
 
-compute_data('google_tweets_processed.csv', 'google_sentiment.csv')
+compute_data('google_tweets_processed.csv', 'google_sentiment.csv')#Change these outputs depending on what data was being classified.

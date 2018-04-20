@@ -1,3 +1,5 @@
+#This script was used to collect positive and negative tweets for training and testing data.
+
 import tweepy
 import re
 import csv

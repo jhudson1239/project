@@ -1,3 +1,5 @@
+#This script was used to test the precision, recall and f-measure of TextBlob
+
 import csv 
 from textblob import TextBlob
 from sklearn.metrics import classification_report

@@ -1,3 +1,5 @@
+#This script is the classification script for Textblob that was used for its final sentiment analysis results.
+
 import csv 
 from textblob import TextBlob
 
@@ -31,5 +33,5 @@ def sentiment(file, proFile):
     
 
 
-sentiment('amazon_tweets_processed.csv', 'amazon_textblob.csv')
+sentiment('amazon_tweets_processed.csv', 'amazon_textblob.csv')#Change these outputs depending on what data was being classified.
 print(tweets)

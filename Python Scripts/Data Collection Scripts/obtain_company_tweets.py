@@ -1,8 +1,11 @@
+#This script was used to collect the raw tweets on a specific company.
+
 import tweepy
 import re
 import csv
 import time
 
+#Following code connects to the twitter API through tweepy
 consumer_key= 'PXhXlHgbNzbcqOdtRN2z20YSK'
 consumer_secret= 'OOUzo1KarUKvsbxlu0cFIkHyQgDEiqgZhpSCu1cUqafvmgtnZu'
 
@@ -15,7 +18,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 def company ():
-    company = "microsoft"
+    company = "microsoft"#change company name here
     emojis = ('\U0001f642', '\U0001f60d', '\U0001f602', '\U0001f615', '\u2728')
 
     public_tweets = api.search(company ,lang="en", count = 100)
@@ -43,6 +46,7 @@ def company ():
                 testFileWriter.writerow([tweet.user.screen_name , text])
             testFile.close()
     
+#While loop to loop through the functions many times
 idx=0
 while idx < 100 :
     company()

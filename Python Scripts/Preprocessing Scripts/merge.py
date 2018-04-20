@@ -1,3 +1,7 @@
+#This script takes the postive and negative tweets and merges them togther once they have been through
+#the no repeats script. This file was used for many different files, just the variables of names for the 
+#files were changed
+
 import csv
 
 tweets = []

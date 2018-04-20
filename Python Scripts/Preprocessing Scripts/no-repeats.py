@@ -1,3 +1,6 @@
+#This file takes a csv file and checks it for repeating posts, it then creats another CSV that contians no repeats.
+
+
 import csv
 def compute (file, outFile):
     tweet = []
@@ -16,6 +19,4 @@ def compute (file, outFile):
             writer.writerow(row)
 
 
-compute('150000_training_data.csv', '150000_training_data.csv')
-
-#This scripts takes a file and make sures there is no reapeats of text in the data
+compute('positive.csv', 'positive_no_repeat.csv')
