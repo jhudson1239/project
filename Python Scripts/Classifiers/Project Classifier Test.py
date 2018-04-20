@@ -24,7 +24,7 @@ def load_dataset_from_csv (input_csv_file):
             review_texts.append(row[1])
     return review_texts, review_labels
 
-training_texts, training_labels = load_dataset_from_csv('150000_training_data_final.csv')#Change the training data here
+training_texts, training_labels = load_dataset_from_csv('150000_training_data.csv')#Change the training data here
 
 testing_texts, testing_labels = load_dataset_from_csv('testing_data.csv')#change the testing data here
 
@@ -38,7 +38,7 @@ test_count_vectorizer = CountVectorizer(stop_words='english', vocabulary=trainin
 
 test_bow_instances = test_count_vectorizer.fit_transform(testing_texts)
 
-classifier =MultinomialNB() #Change the classifer here
+classifier =RandomForestClassifier(n_estimators = 20, n_jobs=5) #Change the classifer here
 
 classifier.fit(training_bow_instances, training_labels)
 

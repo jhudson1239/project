@@ -4,7 +4,7 @@
 import csv
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import classification_report
-from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
 
 def load_dataset_from_csv (input_csv_file):
     review_labels = []
@@ -30,7 +30,7 @@ def load_company_csv (input_csv_file):
 
 def compute_data (testfile, finalFile):
 
-    training_texts, training_labels = load_dataset_from_csv('150000_training_data_final_backup.csv')
+    training_texts, training_labels = load_dataset_from_csv('150000_training_data.csv')
 
     username,testing_texts = load_company_csv(testfile)
 
@@ -44,7 +44,7 @@ def compute_data (testfile, finalFile):
 
     test_bow_instances = test_count_vectorizer.fit_transform(testing_texts)
 
-    classifier = GaussianNB()
+    classifier = RandomForestClassifier(n_estimators = 20, n_jobs=5) 
     classifier.fit(training_bow_instances, training_labels)
 
     predicted_labels = classifier.predict(test_bow_instances)
@@ -62,4 +62,4 @@ def compute_data (testfile, finalFile):
         for row in tweets:
             writer.writerow(row)
 
-compute_data('google_tweets_processed.csv', 'google_sentiment.csv')#Change these outputs depending on what data was being classified.
+compute_data('amazon_tweets_processed.csv', 'amazon_sentiment.csv')#Change these outputs depending on what data was being classified.
